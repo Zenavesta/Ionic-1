@@ -1,0 +1,32 @@
+ion-content {
+  --background: #fff; // Establece el color de fondo del contenido
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  ion-icon {
+    margin-top: 20px;
+    font-size: 3rem;
+    color: var(--ion-color-primary);
+  }
+
+  ion-item {
+    margin-top: 20px;
+    --padding-start: 0;
+    --border-color: #ccc;
+
+    &:last-child {
+      margin-bottom: 20px;
+    }
+  }
+
+  .login-button {
+    margin-top: 40px;
+  }
+}
