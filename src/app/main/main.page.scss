@@ -1,32 +1,147 @@
+.hidden-header {
+  display: none;
+}
+
+/* Estilo global para todos los elementos */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Estilo del contenido principal de Ionic */
 ion-content {
-  --background: #fff; // Establece el color de fondo del contenido
+  --background: #1f293a;
   display: flex;
   justify-content: center;
   align-items: center;
+  min-height: 100vh;
+}
+
+/* Contenedor principal para centrar el contenido */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
   height: 100%;
 }
 
-.login-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  ion-icon {
-    margin-top: 20px;
-    font-size: 3rem;
-    color: var(--ion-color-primary);
-  }
+/* Estilo de la caja de inicio de sesión */
+.login-box {
+  background: #2c3e50;
+  padding: 40px 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  width: 90%;
+  max-width: 400px;
+}
 
-  ion-item {
-    margin-top: 20px;
-    --padding-start: 0;
-    --border-color: #ccc;
+/* Estilo del encabezado */
+h2 {
+  font-size: 2em;
+  color: #0ef;
+  margin-bottom: 20px;
+}
 
-    &:last-child {
-      margin-bottom: 20px;
-    }
-  }
+/* Contenedor de cada cuadro de entrada */
+.input-box {
+  margin-bottom: 20px;
+}
 
-  .login-button {
-    margin-top: 40px;
-  }
+/* Estilo de los elementos de entrada de Ionic */
+ion-item.input-box {
+  --highlight-color-focused: #0ef;
+  --min-height: 50px;
+  border: 2px solid #2c4766;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Estilo de las etiquetas */
+ion-label {
+  color: #fff;
+  font-size: 0.9em;
+  top: -10px;
+}
+
+/* Estilo de las entradas de texto */
+ion-input {
+  --placeholder-color: #07021e;
+  color: #fff;
+  padding: 15px 20px 10px 20px;
+  font-size: 0.9em;
+  border-radius: 25px;
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+}
+
+/* Estilo de las entradas de texto cuando están en foco */
+ion-input:focus {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Estilo del enlace de "Olvidé mi contraseña" */
+.forgot-pass {
+  margin: -10px 0 20px;
+  text-align: center;
+}
+
+/* Estilo del botón de "Olvidé mi contraseña" */
+.forgot-pass ion-button {
+  font-size: 0.75em;
+  color: #0ef;
+  --padding-start: 0;
+  --padding-end: 0;
+}
+
+/* Efecto al pasar el ratón sobre el botón de "Olvidé mi contraseña" */
+.forgot-pass ion-button:hover {
+  text-decoration: underline;
+}
+
+/* Estilo del botón principal */
+.btn {
+  width: 100%;
+  height: 45px;
+  background: #ff0000; /* Cambiado a rojo */
+  border: none;
+  outline: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 1em;
+  color: #1f293a;
+  font-weight: 600;
+}
+
+/* Efecto al pasar el ratón sobre el botón principal */
+.btn:hover {
+  background: #cc0000; /* Rojo más oscuro al pasar el ratón */
+}
+
+/* Estilo del enlace para registrarse */
+.signup-link {
+  margin: 20px 0 10px;
+  text-align: center;
+}
+
+/* Estilo del párrafo dentro del enlace para registrarse */
+.signup-link p {
+  color: #fff;
+  font-size: 0.75rem;
+}
+
+/* Estilo del enlace para registrarse */
+.signup-link a {
+  font-size: 1em;
+  color: #0ef;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* Efecto al pasar el ratón sobre el enlace para registrarse */
+.signup-link a:hover {
+  text-decoration: underline;
 }

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { IonContent, IonHeader, IonTitle, IonToolbar, IonItem, IonInput, IonLabel, IonCardContent, IonCardHeader, IonCard, IonCardTitle, IonButton, IonIcon } from '@ionic/angular/standalone';
+import { IonContent, IonHeader, IonTitle, IonToolbar, IonItem, IonInput, IonLabel, IonCardContent, IonCardHeader, IonCard, IonCardTitle, IonButton, IonIcon, IonCol, IonRow, IonFab, IonFabButton, IonText, IonToast, IonFooter, IonLoading, IonAvatar, IonGrid } from '@ionic/angular/standalone';
 import { RouterLink } from '@angular/router';
 
 @Component({
@@ -9,7 +9,7 @@ import { RouterLink } from '@angular/router';
   templateUrl: './main.page.html',
   styleUrls: ['./main.page.scss'],
   standalone: true,
-  imports: [IonIcon, IonButton, IonCardTitle, IonCard, IonCardHeader, IonCardContent, IonLabel, IonInput, IonItem, IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule,RouterLink]
+  imports: [IonGrid, IonAvatar, IonLoading, IonFooter, IonToast, IonText, IonFabButton, IonFab, IonRow, IonCol, IonIcon, IonButton, IonCardTitle, IonCard, IonCardHeader, IonCardContent, IonLabel, IonInput, IonItem, IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule,RouterLink]
 })
 export class MainPage implements OnInit {
 
