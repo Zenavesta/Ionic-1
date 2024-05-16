@@ -1,0 +1,60 @@
+<ion-header class="hidden-header">
+  <ion-toolbar>
+    <ion-title>Registro</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form>
+    <ion-item>
+      <ion-input placeholder="Nombres" type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input placeholder="Apellido paterno" type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input placeholder="Apellido materno" type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input placeholder="Dni/Pasaporte" type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input placeholder="Edad" type="number"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input placeholder="Ocupación" type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label class="opcion-gestante">Gestante</ion-label>
+      <ion-radio-group>
+        <ion-item>
+          <ion-radio  value="Sí" class="opcion-gestante-radio"></ion-radio>
+          <ion-label class="opcion-gestante-label">Sí</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-radio value="No" class="opcion-gestante-radio"></ion-radio>
+          <ion-label class="opcion-gestante-label">No</ion-label>
+        </ion-item>
+      </ion-radio-group>
+    </ion-item>
+
+    <ion-item>
+      <ion-input placeholder="Semanas" type="number"></ion-input>
+    </ion-item>
+
+    <ion-row>
+      <ion-col size="6">
+        <ion-button expand="block" type="submit">Registrar</ion-button>
+      </ion-col>
+      <ion-col size="6">
+        <ion-button expand="block" color="medium">Cerrar</ion-button>
+      </ion-col>
+    </ion-row>
+  </form>
+</ion-content>
