@@ -1,3 +1,8 @@
+//improtar fuente
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
+
+//variables
 $main-bg-color: #1f293a;
 $box-bg-color: #2c3e50;
 $highlight-color: #0ef;
@@ -37,7 +42,7 @@ ion-content {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 /* Estilo del logo con contorno hexagonal */
@@ -73,10 +78,10 @@ ion-content {
 /* Estilo del encabezado */
 h2 {
   font-size: 2em;
-  color: $highlight-color;
+  color: $highlight-color; /* Cambia el color aquí si es necesario */
   margin-bottom: 20px;
+  font-family: 'Montserrat', sans-serif; /* Aplica la nueva fuente */
 }
-
 /* Contenedor de cada cuadro de entrada */
 .input-box {
   margin-bottom: 20px;
