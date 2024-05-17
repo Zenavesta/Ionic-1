@@ -7,7 +7,10 @@
 <ion-content>
   <div class="container">
     <div class="login-box">
-      <h2>Login</h2>
+      <div class="logo-container">
+        <img src="assets/images/login_logo.png" alt="Logo" class="logo">
+      </div>
+      <h2>YANADENV</h2>
       <form>
         <ion-item class="input-box">
           <ion-input type="email" placeholder="Email"></ion-input>
@@ -18,11 +21,10 @@
         <div class="forgot-pass">
           <ion-button fill="clear" class="boton1">¿Olvidaste tu contraseña?</ion-button>
         </div>
-        <!-- Asegúrate de que solo haya un botón de "Login" aquí -->
-
-        <ion-button  type="submit" color="" class="btn">Login</ion-button>
+        <!-- Usando un input de tipo botón -->
+        <input type="button" value="Login" class="custom-btn">
         <div class="signup-link">
-          <p>¿Aún no tienes una cuenta? <a href="">Regístrate</a></p>
+          <p>Hecho en <a href="">Intilab</a></p>
         </div>
       </form>
     </div>

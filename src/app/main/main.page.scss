@@ -1,3 +1,15 @@
+$main-bg-color: #1f293a;
+$box-bg-color: #2c3e50;
+$highlight-color: #0ef;
+$input-border-color: #2c4766;
+$btn-bg-color: #ff0000;
+$btn-bg-color-hover: #cc0000;
+$text-color: #fff;
+$text-color-alt: #1f293a;
+$font-family: 'Poppins', sans-serif;
+$box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+$border-radius: 25px;
+
 .hidden-header {
   display: none;
 }
@@ -7,17 +19,35 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family: $font-family;
 }
 
 /* Estilo del contenido principal de Ionic */
 ion-content {
-  --background: #1f293a;
+  background-color: $main-bg-color;
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  flex-direction: column;
 }
+
+/* Contenedor del logo */
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+/* Estilo del logo con contorno hexagonal */
+.logo {
+  width: 100px; /* Ajusta el tamaño del logo según sea necesario */
+  height: auto;
+  position: relative;
+}
+
+
 
 /* Contenedor principal para centrar el contenido */
 .container {
@@ -26,14 +56,15 @@ ion-content {
   align-items: center;
   width: 100%;
   height: 100%;
+  flex-direction: column;
 }
 
 /* Estilo de la caja de inicio de sesión */
 .login-box {
-  background: #2c3e50;
+  background: $box-bg-color;
   padding: 40px 30px;
   border-radius: 10px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  box-shadow: $box-shadow;
   text-align: center;
   width: 90%;
   max-width: 400px;
@@ -42,7 +73,7 @@ ion-content {
 /* Estilo del encabezado */
 h2 {
   font-size: 2em;
-  color: #0ef;
+  color: $highlight-color;
   margin-bottom: 20px;
 }
 
@@ -53,16 +84,16 @@ h2 {
 
 /* Estilo de los elementos de entrada de Ionic */
 ion-item.input-box {
-  --highlight-color-focused: #0ef;
+  --highlight-color-focused: $highlight-color;
   --min-height: 50px;
-  border: 2px solid #2c4766;
+  border: 2px solid $input-border-color;
   border-radius: 20px;
   background: rgba(255, 255, 255, 0.1);
 }
 
 /* Estilo de las etiquetas */
 ion-label {
-  color: #fff;
+  color: $text-color;
   font-size: 0.9em;
   top: -10px;
 }
@@ -70,13 +101,12 @@ ion-label {
 /* Estilo de las entradas de texto */
 ion-input {
   --placeholder-color: #07021e;
-  color: #fff;
+  color: black;
   padding: 15px 20px 10px 20px;
   font-size: 0.9em;
-  border-radius: 25px;
+  border-radius: $border-radius;
   background: rgba(255, 255, 255, 0.1);
   border: none;
-
 }
 
 /* Estilo de las entradas de texto cuando están en foco */
@@ -93,7 +123,7 @@ ion-input:focus {
 /* Estilo del botón de "Olvidé mi contraseña" */
 .forgot-pass ion-button {
   font-size: 0.75em;
-  color: #0ef;
+  color: $highlight-color;
   --padding-start: 0;
   --padding-end: 0;
 }
@@ -103,23 +133,29 @@ ion-input:focus {
   text-decoration: underline;
 }
 
-/* Estilo del botón principal */
-.btn {
-  width: 100%;
+/* Estilo del botón personalizado */
+.custom-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%; // Ancho del 80%
   height: 45px;
-  background: #ff0000; /* Cambiado a rojo */
+  background: $highlight-color;
   border: none;
-  outline: none;
-  border-radius: 25px;
+  border-radius: $border-radius;
   cursor: pointer;
   font-size: 1em;
-  color: #1f293a;
+  color: $text-color-alt;
   font-weight: 600;
+  text-align: center;
+  margin-left: auto;  // Margen automático a la izquierda
+  margin-right: auto; // Margen automático a la derecha
+  margin-top: 20px;
 }
 
-/* Efecto al pasar el ratón sobre el botón principal */
-.btn:hover {
-  background: #cc0000; /* Rojo más oscuro al pasar el ratón */
+
+.custom-btn:hover {
+  background: $btn-bg-color-hover; /* Rojo más oscuro al pasar el ratón */
 }
 
 /* Estilo del enlace para registrarse */
@@ -130,14 +166,14 @@ ion-input:focus {
 
 /* Estilo del párrafo dentro del enlace para registrarse */
 .signup-link p {
-  color: #fff;
+  color: $text-color;
   font-size: 0.75rem;
 }
 
 /* Estilo del enlace para registrarse */
 .signup-link a {
   font-size: 1em;
-  color: #0ef;
+  color: $highlight-color;
   text-decoration: none;
   font-weight: 600;
 }
