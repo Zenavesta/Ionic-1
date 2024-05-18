@@ -5,61 +5,62 @@
 </ion-header>
 
 <ion-content>
-  <form>
+  <form (ngSubmit)="onSubmit()">
     <ion-item>
-      <ion-input class="input-form" placeholder="Nombres" type="text"></ion-input>
+      <ion-input class="input-form" placeholder="Nombres" type="text" [(ngModel)]="nombres" name="nombres"></ion-input>
     </ion-item>
     <ion-row>
       <ion-col size="6">
         <ion-item>
-          <ion-input class="input-form" placeholder="Apellido paterno" type="text"></ion-input>
+          <ion-input class="input-form" placeholder="Apellido paterno" type="text" [(ngModel)]="apellidoPaterno" name="apellidoPaterno"></ion-input>
         </ion-item>
       </ion-col>
       <ion-col size="6">
         <ion-item>
-         <ion-input class="input-form" placeholder="Apellido materno" type="text"></ion-input>
+         <ion-input class="input-form" placeholder="Apellido materno" type="text" [(ngModel)]="apellidoMaterno" name="apellidoMaterno"></ion-input>
         </ion-item>
       </ion-col>
     </ion-row>
 
     <ion-item lines="none" class="align-label-select">
-      <ion-label  class="custom-label" >Sexo</ion-label>
-      <ion-select placeholder="Seleccione">
+      <ion-label class="custom-label">Sexo</ion-label>
+      <ion-select placeholder="Seleccione" [(ngModel)]="sexo" name="sexo" (ionChange)="onSexoChange($event)">
         <ion-select-option value="Masculino">Masculino</ion-select-option>
         <ion-select-option value="Femenino">Femenino</ion-select-option>
       </ion-select>
     </ion-item>
 
     <ion-item>
-      <ion-input class="input-form" placeholder="Dni/Pasaporte" type="text"></ion-input>
+      <ion-input class="input-form" placeholder="Dni/Pasaporte" type="text" [(ngModel)]="dniPasaporte" name="dniPasaporte"></ion-input>
     </ion-item>
 
     <ion-item>
-      <ion-input class="input-form" placeholder="Edad" type="number"></ion-input>
+      <ion-input class="input-form" placeholder="Edad" type="number" [(ngModel)]="edad" name="edad"></ion-input>
     </ion-item>
 
     <ion-item>
-      <ion-input class="input-form" placeholder="Ocupación" type="text"></ion-input>
+      <ion-input class="input-form" placeholder="Ocupación" type="text" [(ngModel)]="ocupacion" name="ocupacion"></ion-input>
     </ion-item>
 
+    <div *ngIf="sexo === 'Femenino'">
+      <ion-item lines="none" class="gestante-item">
+        <ion-label class="opcion-gestante">Gestante</ion-label>
+        <ion-radio-group class="opcion-gestante-group" dir="ltr" [(ngModel)]="gestante" name="gestante" (ionChange)="onGestanteChange($event)">
+          <ion-item lines="none">
+            <ion-radio value="Si" class="opcion-gestante-radio"></ion-radio>
+            <ion-label class="opcion-gestante-label">Si</ion-label>
+          </ion-item>
+          <ion-item lines="none">
+            <ion-radio value="No" class="opcion-gestante-radio"></ion-radio>
+            <ion-label class="opcion-gestante-label">No</ion-label>
+          </ion-item>
+        </ion-radio-group>
+      </ion-item>
 
-    <ion-item lines="none" class="gestante-item">
-      <ion-label class="opcion-gestante">Gestante</ion-label>
-      <ion-radio-group class="opcion-gestante-group" dir="ltr">
-        <ion-item lines="none">
-          <ion-radio value="Sí" class="opcion-gestante-radio"></ion-radio>
-          <ion-label class="opcion-gestante-label">Sí</ion-label>
-        </ion-item>
-        <ion-item lines="none">
-          <ion-radio value="No" class="opcion-gestante-radio"></ion-radio>
-          <ion-label class="opcion-gestante-label">No</ion-label>
-        </ion-item>
-      </ion-radio-group>
-    </ion-item>
-
-    <ion-item>
-      <ion-input placeholder="Semanas" type="number"></ion-input>
-    </ion-item>
+      <ion-item *ngIf="gestante === 'Si'">
+        <ion-input placeholder="Semanas" type="number" name="semanas"></ion-input>
+      </ion-item>
+    </div>
 
     <ion-row>
       <ion-col size="6">
