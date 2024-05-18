@@ -53,14 +53,16 @@ ion-row {
     --padding-end: 32px;
   }
 }
-
+.custom-label {
+  margin-right: 120px;
+}
 .gestante-item {
   display: flex;
   flex-direction: column;
 }
 
 .opcion-gestante {
-  font-weight: bold;
+
   margin-bottom: 10px;
 }
 
