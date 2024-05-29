@@ -1,0 +1,59 @@
+<ion-header class="hidden-header">
+  <ion-toolbar>
+    <ion-title>Registro de centros</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="container">
+    <div class="register-box">
+      <h2>Registro de centros</h2>
+      <form>
+        <ion-item lines="none" class="input-box">
+          <ion-label>Nivel</ion-label>
+          <ion-select placeholder="Selecciona el nivel" interface="popover" name="nivel">
+            <ion-select-option value="Nivel 1">Nivel 1</ion-select-option>
+            <ion-select-option value="Nivel 2">Nivel 2</ion-select-option>
+          </ion-select>
+        </ion-item>
+        <ion-item lines="none" class="input-box">
+          <ion-label>Departamento</ion-label>
+          <ion-select placeholder="Selecciona departamento" interface="popover" name="departamento">
+            <ion-select-option value="Departamento 1">Departamento 1</ion-select-option>
+            <ion-select-option value="Departamento 2">Departamento 2</ion-select-option>
+          </ion-select>
+        </ion-item>
+        <ion-item lines="none" class="input-box">
+          <ion-label>Provincia</ion-label>
+          <ion-select placeholder="Selecciona provincia" interface="popover" name="provincia">
+            <ion-select-option value="Provincia 1">Provincia 1</ion-select-option>
+            <ion-select-option value="Provincia 2">Provincia 2</ion-select-option>
+          </ion-select>
+        </ion-item>
+        <ion-item lines="none" class="input-box">
+          <ion-label>Distrito</ion-label>
+          <ion-select placeholder="Selecciona distrito" interface="popover" name="distrito">
+            <ion-select-option value="Distrito 1">Distrito 1</ion-select-option>
+            <ion-select-option value="Distrito 2">Distrito 2</ion-select-option>
+          </ion-select>
+        </ion-item>
+        <ion-item class="input-box">
+
+          <ion-input placeholder="Nombre de centro" type="text" name="nombre"></ion-input>
+        </ion-item>
+        <ion-item  class="input-box">
+
+          <ion-textarea placeholder="Dirección" name="direccion"></ion-textarea>
+        </ion-item>
+        <ion-row>
+          <ion-col size="6">
+            <ion-button class="ph-center"   expand="block" type="submit" class="btn">Registrar</ion-button>
+          </ion-col>
+          <ion-col size="6">
+            <ion-button class="ph-center" expand="block" color="medium" class="btn">Cerrar</ion-button>
+          </ion-col>
+        </ion-row>
+      </form>
+    </div>
+  </div>
+</ion-content>

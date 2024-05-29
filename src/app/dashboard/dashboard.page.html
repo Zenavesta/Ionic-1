@@ -1,0 +1,27 @@
+<ion-menu side="start" menuId="main-menu" contentId="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Menú</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+    <div class="admin-profile">
+      <img src="assets/imgs/admin.jpg" alt="Admin" class="admin-photo">
+      <h2>Admin Name</h2>
+    </div>
+    <ion-list>
+      <ion-item routerLink="/home">
+        <ion-icon name="home" slot="start"></ion-icon>
+        Inicio
+      </ion-item>
+      <ion-item routerLink="/settings">
+        <ion-icon name="settings" slot="start"></ion-icon>
+        Configuración
+      </ion-item>
+      <!-- Agrega más ítems según sea necesario -->
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+<ion-router-outlet id="main-content"></ion-router-outlet>

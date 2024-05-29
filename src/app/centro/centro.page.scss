@@ -2,12 +2,20 @@
 
 // Variables
 $font-family: 'Poppins', sans-serif;
-$border-radius: 25px;
+$border-radius: 10px;
+$primary-color: #0056b3;
+$button-color: #004494;
+$background-color: #f8f9fa;
+$box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 
 .hidden-header {
   display: none;
 }
-
+/* Estilo de los placeholders */
+::placeholder {
+  text-align: center; 
+  color:black/* Alineación centrada del texto del placeholder */
+}
 /* Estilo global para todos los elementos */
 * {
   margin: 0;
@@ -18,11 +26,13 @@ $border-radius: 25px;
 
 /* Estilo del contenido principal de Ionic */
 ion-content {
+  background-color: $background-color; /* Fondo claro */
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
   flex-direction: column;
+  padding: 20px; /* Añadido para asegurar que haya un poco de espacio alrededor del contenido */
 }
 
 /* Contenedor principal para centrar el contenido */
@@ -37,13 +47,16 @@ ion-content {
 
 /* Estilo de la caja de registro */
 .register-box {
-  padding: 40px 30px;
-  border-radius: 10px;
-  text-align: center;
-  width: 90%;
-  max-width: 600px;
+  padding: 40px 20px;
+  border-radius: $border-radius;
+  width: 100%; /* Para asegurarse de que el contenido esté centrado */
+  max-width: 600px; /* Ancho máximo para el contenedor */
   background: #fff; /* Fondo blanco */
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Sombra */
+  box-shadow: $box-shadow; /* Sombra */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Estilo del encabezado */
@@ -52,36 +65,45 @@ h2 {
   margin-bottom: 20px;
   font-family: 'Montserrat', sans-serif; /* Aplica la nueva fuente */
   color: #333; /* Color del texto */
+  text-align: center; /* Alineación centrada del título */
 }
 
 /* Contenedor de cada cuadro de entrada */
 .input-box {
-  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Para separar la etiqueta del campo de entrada */
+  gap: 10px; /* Espacio entre la etiqueta y el campo de entrada */
+  margin-bottom: 50px; /* Margen inferior para separar cada campo de entrada */
+  width: 100%; /* Para asegurarse de que los inputs ocupen todo el ancho disponible */
 }
 
 /* Estilo de los elementos de entrada de Ionic */
 ion-item.input-box {
-  --highlight-color-focused: #333; /* Color de enfoque */
+  --highlight-color-focused: $primary-color; /* Color de enfoque */
   --min-height: 50px;
-  background: #f9f9f9; /* Fondo gris claro */
+  border-radius: $border-radius;
+  padding: 0 20px; /* Espacio interno */
+  margin-bottom: 15px; /* Añadido para asegurar más espacio entre los elementos */
 }
 
 /* Estilo de las etiquetas */
 ion-label {
-  color: #666; /* Color del texto */
+  color: #333; /* Color del texto */
   font-size: 0.9em;
-  top: -10px;
+  margin-right: 80px; /* Añadido para separar más la etiqueta del campo de entrada */
 }
 
-/* Estilo de las entradas de texto */
-ion-input {
+/* Estilo de las entradas de texto y selectores */
+ion-input,
+ion-select {
   --placeholder-color: #aaa; /* Color del marcador de posición */
   color: #333; /* Color del texto */
-  padding: 15px 20px 10px 20px;
+  padding: 10px 0; /* Espacio interno ajustado */
   font-size: 0.9em;
-  border-radius: $border-radius;
   background: transparent;
   border: none;
+  flex: 1; /* Asegura que los inputs y selectores ocupen el resto del espacio disponible */
 }
 
 /* Estilo del botón personalizado */
@@ -118,3 +140,4 @@ ion-input {
     align-items: center;
     justify-content: flex-start;
   }
+

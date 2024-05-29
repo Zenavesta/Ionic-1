@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
+// Variables
+$font-family: 'Poppins', sans-serif;
+$border-radius: 25px;
+$primary-color: #0056b3;
+$button-color: #004494;
+$background-color: #f8f9fa;
+$box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+
+.hidden-header {
+  display: none;
+}
+
+/* Estilo global para todos los elementos */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $font-family;
+}
+
+/* Estilo del contenido principal de Ionic */
+ion-content {
+  background-color: $background-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  flex-direction: column;
+  padding: 20px;
+}
+
+/* Contenedor principal para centrar el contenido */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+}
+
+/* Estilo de la caja de registro */
+.register-box {
+  padding: 10px 30px;
+  border-radius: $border-radius;
+  width: 90%;
+  max-width: 1000px;
+  background: #fff;
+  box-shadow: $box-shadow;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+}
+
+/* Estilo del encabezado */
+h2 {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  font-family: 'Montserrat', sans-serif;
+  color: #333;
+  text-align: center;
+}
+
+/* Contenedor de cada cuadro de entrada */
+.input-box {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+/* Estilo de los elementos de entrada de Ionic */
+ion-item.input-box {
+  --highlight-color-focused: #333;
+  --min-height: 20px;
+  background: #f9f9f9;
+
+}
+
+/* Estilo de las etiquetas */
+ion-label {
+  color: #666;
+  font-size: 0.9em;
+  flex: 1;
+}
+
+/* Estilo de los checkbox */
+ion-checkbox {
+  --background: transparent;
+  --border-color: $primary-color;
+  --checkmark-color: $primary-color;
+  --size: 1.5em;
+}
+
+/* Estilo del botón personalizado */
+.btn {
+  --background: $button-color;
+  --background-activated: $button-color;
+  --background-focused: $button-color;
+  --border-radius: $border-radius;
+  color: #fff;
+  width: 100%;
+  border-radius: 50px;
+}
+
+.btn:hover {
+  --background: lighten($button-color, 10%);
+}
+
+/* Estilo del contenedor de los botones */
+ion-row {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 24px;
+  width: 100%;
+
+  ion-col {
+    flex: 1;
+    margin: 0 5px;
+  }
+}
